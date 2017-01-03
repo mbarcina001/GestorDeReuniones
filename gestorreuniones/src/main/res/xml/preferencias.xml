@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android = "http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory
+        android:title="@string/colores">
+
+        <yuku.ambilwarna.widget.AmbilWarnaPreference
+            android:key="colorfondokey"
+            android:defaultValue="0xfff3f3f3"
+            android:title="@string/elegircolorfondo"
+            android:summary="@string/elegircolorfondodesc"/>
+        <yuku.ambilwarna.widget.AmbilWarnaPreference
+            android:key="colorletrakey"
+            android:defaultValue="0xff000000"
+            android:title="@string/elegircolorletra"
+            android:summary="@string/elegircolorletradesc" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/sync">
+
+        <Preference android:title="@string/sync"
+            android:key="@string/sync"
+            android:summary="@string/syncdesc"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/gestion">
+
+        <Preference android:title="@string/clean"
+            android:key="@string/clean"
+            android:summary="@string/cleandesc"/>
+
+    </PreferenceCategory>
+</PreferenceScreen>

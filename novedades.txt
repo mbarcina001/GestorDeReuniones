@@ -1,0 +1,24 @@
+NOVEDADES:
+	- Fragment de login que se muestra desde el principio y que también es accesible desde el menu de la toolbar.
+	- Opción de registro incluída en el fragment de login.
+	- Posibilidad de añadir reuniones a todos los dispositivos vía gcm desde http://galan.ehu.es/mbarcina001/WEB/index.php
+	- Posibilidad de almacenar diversos datos del usuario en una base de datos remota.
+	- Añadida una Toolbar a la Actividad Notas.
+	- Text-to-speech y Speech Recognition en la Actividad Notas.
+	- Widget que se actualiza cada media hora mostrando la próxima reunión.
+	- Uso de Calendar Provider para añadir todos los eventos existentes en el calendario google del usuario a la lista de reuniones (Añade todos los que se encuentren entre el día en que se realiza la sincronización y ese mismo día pero del año siguiente). Esta opción se encuentra en preferencias.
+		/- Si la reunión o el evento dura más de 1 día (del mismo mes), y dado que en la aplicación no se guarda el día de fin y que tampoco tengo tiempo de implementarlo, se crearán 2 eventos de nombre: "nombre_del_evento" y "nombre_del_evento_(cont)"
+		/- Si la reunión ya está en la lista de reuniones, no se vuelve a añadir.
+	- Posibilidad de borrar todas las reuniones de la lista. Esta opción también se encuentra en preferencias.
+	
+FUNCIONALIDADES ANTIGUAS QUE PUNTÚAN EN ESTA PRÁCTICA:
+	- Obtención de la geolocalización del usuario mediante Google play services.
+	- Uso de Google Maps para mostrar al usuario su localización actual mediante el uso de etiquetas.
+	
+FIXES:
+	- Arreglado el problema que ocurría con los colores al girar la pantalla.
+		/- El problema era que dejaba ese trabajo para el listener de preferencias cuando era más eficiente emplear el método onSaveInstanceState para guardar los colores en cada momento.
+	- Arreglado el NullPointer que tiraba la aplicación la primera vez que se abría cuando intentaba obtener la última posición conocida.
+	- Arreglado el fragmento FragmentReunion que en vez de mostrar la hora de fin mostraba otra vez la hora de inicio.
+		/- El problema era que al recoger los argumentos que recibía FragmentReunion, en vez de hacer args.getInt("horafin"), hacía args.getInt("horainicio") y de ahí que se repitiera.
+	- La lista de reuniones ahora se ordena por la fecha de inicio de reunión para todas las reuniones próximas.

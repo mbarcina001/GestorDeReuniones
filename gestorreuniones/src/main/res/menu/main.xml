@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/show_coords"
+        android:icon="@mipmap/ic_location_on_white_48dp"
+        android:title="@string/show_coords"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/show_task_list"
+        android:icon="@mipmap/ic_list_white_48dp"
+        android:title="@string/show_task_list"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/identify"
+        android:title="@string/action_identify"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/showdata"
+        android:title="@string/show_data"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        app:showAsAction="never"/>
+</menu>

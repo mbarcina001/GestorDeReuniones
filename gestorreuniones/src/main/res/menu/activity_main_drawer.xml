@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_anadir"
+            android:icon="@mipmap/ic_add_to_queue_black_48dp"
+            android:title="@string/anadirreunion" />
+        <item
+            android:id="@+id/nav_consultar"
+            android:icon="@mipmap/ic_toc_black_48dp"
+            android:title="@string/consultarlista" />
+        <item
+            android:id="@+id/nav_eliminar"
+            android:icon="@mipmap/ic_remove_from_queue_black_48dp"
+            android:title="@string/eliminarreunion" />
+    </group>
+
+</menu>
